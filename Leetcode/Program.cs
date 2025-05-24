@@ -32,9 +32,35 @@ linkedLists.PrintList(result);
 */
 
 Console.WriteLine(LongestValidParentheses("(()"));
+Console.WriteLine(LongestValidParentheses("(()))())("));
 
 int LongestValidParentheses(string s)
 {
+    char open = '(';
+    int maxLength = 0;
+    var stack = new Stack<int>();
+    stack.Push(-1);
+    for (int i = 0; i < s.Length; i++)
+    {
+        if (s[i] == open)
+        {
+            stack.Push(i);
+        }
+        else
+        {
+            stack.Pop();
+            if (stack.Count == 0)
+            {
+                stack.Push(i);
+            }
+            else
+            {
+                maxLength = Math.Max(maxLength, i - stack.Peek());
+            }
+        }
+    }
+
+    return maxLength;
 }
 
 /*
