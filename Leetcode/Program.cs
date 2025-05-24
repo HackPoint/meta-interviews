@@ -31,8 +31,40 @@ linkedLists.PrintList(l2);
 linkedLists.PrintList(result);
 */
 
-Console.WriteLine(LongestValidParentheses("(()"));
-Console.WriteLine(LongestValidParentheses("(()))())("));
+// Console.WriteLine(LongestValidParentheses("(()"));
+// Console.WriteLine(LongestValidParentheses("(()))())("));
+
+Console.WriteLine(FindAnagrams("cbaebabacd", "abc"));
+
+IList<int> FindAnagrams(string s, string p)
+{
+    var result = new List<int>();
+    if (s.Length < p.Length) return result;
+    Span<int> need = stackalloc int[26];
+    Span<int> window = stackalloc int[26];
+    int left = 0;
+
+    foreach (char c in p)
+        need[c - 'a']++;
+
+    for (int right = 0; right < s.Length; right++)
+    {
+        window[s[right] - 'a']++;
+
+        if (right - left + 1 > p.Length)
+        {
+            window[s[left] - 'a']--;
+            left++;
+        }
+
+        if (right - left + 1 == p.Length && window.SequenceEqual(need))
+        {
+            result.Add(left);
+        }
+    }
+    Console.WriteLine(string.Join("\n", result.Select(list => "[" + string.Join(", ", list) + "]")));
+    return result;
+}
 
 int LongestValidParentheses(string s)
 {
