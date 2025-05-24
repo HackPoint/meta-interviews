@@ -1,11 +1,214 @@
-﻿// ThreeSum([-1, 0, 1, 2, -1, -4]);
+﻿using System.Text;
+using Leetcode;
+using Leetcode.Backtracking;
+using Leetcode.TwoPointers;
+
+// ThreeSum([-1, 0, 1, 2, -1, -4]);
 // Console.WriteLine(LongestPalindrome("babad"));
 // Console.WriteLine(LongestPalindrome("a"));
-
 // Console.WriteLine(SingleNumber([4, 1, 2, 1, 2]));
-
 // Console.WriteLine(MaxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
-Console.WriteLine(MaxArea( [1,8,6,2,5,4,8,3,7]));
+// Console.WriteLine(MaxArea( [1,8,6,2,5,4,8,3,7]));
+// Console.WriteLine(MinWindow("ADOBECODEBANC", "ABC"));
+// GroupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]);
+// LetterCombinations("23");
+//var letterCombinations = new LetterCombinationsPerformanceImprovement();
+//letterCombinations.LetterCombinations("23");
+// TrapWater trapWater = new TrapWater();
+// Console.WriteLine(trapWater.Trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]));
+// Console.WriteLine(trapWater.Trap([4, 2, 0, 3, 2, 5]));
+/*
+LinkedLists linkedLists = new LinkedLists();
+
+var l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+var l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
+
+
+
+var result = linkedLists.AddTwoNumbers(l1, l2);
+linkedLists.PrintList(l1);
+linkedLists.PrintList(l2);
+linkedLists.PrintList(result);
+*/
+
+Console.WriteLine(LongestValidParentheses("(()"));
+
+int LongestValidParentheses(string s)
+{
+}
+
+/*
+ * Input: digits = "23"
+   Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+ */
+IList<string> LetterCombinations(string digits)
+{
+    if (string.IsNullOrEmpty(digits)) return [];
+    var result = new List<string>();
+    Span<char> freq = stackalloc char[digits.Length];
+    var map = new[]
+    {
+        "", "", "abc", "def", "ghi", "jkl",
+        "mno", "pqrs", "tuv", "wxyz"
+    };
+
+    BacktrackPhoneCombinations(0, digits, freq, map, result);
+    Console.WriteLine(string.Join("\n", result.Select(list => "[" + string.Join(", ", list) + "]")));
+    return result;
+}
+
+void BacktrackPhoneCombinations(int index, string digits, Span<char> buffer, string[] map, IList<string> result)
+{
+    if (index == digits.Length)
+    {
+        result.Add(new string(buffer));
+        return;
+    }
+
+    var letters = map[digits[index] - '0'];
+    foreach (var letter in letters)
+    {
+        buffer[index] = letter;
+        BacktrackPhoneCombinations(index + 1, digits, buffer, map, result);
+    }
+}
+
+/*
+   Input: strs = ["eat","tea","tan","ate","nat","bat"]
+   Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+ */
+IList<IList<string>> GroupAnagrams(string[] strs)
+{
+    var map = new Dictionary<string, List<string>>();
+    Span<int> freq = stackalloc int[26];
+
+    foreach (var word in strs)
+    {
+        freq.Clear();
+
+        foreach (char c in word)
+            freq[c - 'a']++;
+
+        // Convert the freq span to a unique key string
+        var keyBuilder = new StringBuilder(52);
+        for (int i = 0; i < 26; i++)
+        {
+            keyBuilder.Append(freq[i]);
+            keyBuilder.Append(',');
+        }
+
+        string key = keyBuilder.ToString();
+
+        if (!map.TryGetValue(key, out var list))
+        {
+            list = new List<string>();
+            map[key] = list;
+        }
+
+        list.Add(word);
+    }
+
+    return map.Values.ToList<IList<string>>();
+}
+
+/*
+   Input: s = "ADOBECODEBANC", t = "ABC"
+   Output: "BANC"
+   Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+   Approach: Sliding window
+ */
+string MinWindow(string s, string t)
+{
+    if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(t) || s.Length < t.Length)
+        return "";
+
+    var need = new Dictionary<char, int>();
+    foreach (char c in t)
+    {
+        need.TryAdd(c, 0);
+        need[c]++;
+    }
+
+    var have = new Dictionary<char, int>();
+    int required = need.Count;
+    int formed = 0;
+    int left = 0, right = 0;
+    int minLen = int.MaxValue;
+    int start = 0;
+
+    while (right < s.Length)
+    {
+        char c = s[right];
+        have.TryAdd(c, 0);
+        have[c]++;
+
+        if (need.ContainsKey(c) && have[c] == need[c])
+        {
+            formed++;
+        }
+
+        while (formed == required)
+        {
+            if (right - left + 1 < minLen)
+            {
+                minLen = right - left + 1;
+                start = left;
+            }
+
+            char leftChar = s[left];
+            have[leftChar]--;
+
+            if (need.ContainsKey(leftChar) && have[leftChar] < need[leftChar])
+            {
+                formed--;
+            }
+
+            left++;
+        }
+
+        right++;
+    }
+
+    return minLen == int.MaxValue ? "" : s.Substring(start, minLen);
+}
+
+
+/*
+ * Input: n=3
+ * Output: ["((()))","(()())","(())()","()(())","()()()"]
+ */
+// GenerateParenthesis(3);
+IList<string> GenerateParenthesis(int n)
+{
+    IList<string> result = new List<string>();
+    Backtrack(new StringBuilder(), 0, 0, n, result);
+    Console.WriteLine(string.Join("\n", result.Select(list => "[" + string.Join(", ", list) + "]")));
+    return result;
+}
+
+void Backtrack(StringBuilder sb, int open, int close, int depth, IList<string> result)
+{
+    if (sb.Length == 2 * depth)
+    {
+        result.Add(sb.ToString());
+        return;
+    }
+
+    if (open < depth)
+    {
+        sb.Append('(');
+        Backtrack(sb, open + 1, close, depth, result);
+        sb.Length--;
+    }
+
+    if (close < open)
+    {
+        sb.Append(')');
+        Backtrack(sb, open, close + 1, depth, result);
+        sb.Length--;
+    }
+}
+
 
 int MaxArea(int[] height)
 {
@@ -14,24 +217,23 @@ int MaxArea(int[] height)
 
     while (left < right)
     {
-         int h = Math.Min(height[left], height[right]);
-         int w = right - left;
-         int area = h * w;
-         maxArea = Math.Max(maxArea, area);
+        int h = Math.Min(height[left], height[right]);
+        int w = right - left;
+        int area = h * w;
+        maxArea = Math.Max(maxArea, area);
 
-         if (height[left] < height[right])
-         {
-             left++;
-         }
-         else
-         {
-             right--;
-         }
+        if (height[left] < height[right])
+        {
+            left++;
+        }
+        else
+        {
+            right--;
+        }
     }
-    
+
     return maxArea;
 }
-
 
 int MaxSubArray(int[] nums)
 {
@@ -50,7 +252,6 @@ int MaxSubArray(int[] nums)
 
     return maxSum;
 }
-
 
 int FindDuplicate(int[] nums)
 {
@@ -110,7 +311,6 @@ int SingleNumber(int[] nums)
     return ones;
 }
 
-//LongestPalindrome
 string LongestPalindrome(string s)
 {
     int startIndex = 0, maxLen = 0;
@@ -142,7 +342,6 @@ int ExpandAroundCenter(string s, int left, int right)
     return right - left - 1;
 }
 
-// ThreeSum
 IList<IList<int>> ThreeSum(int[] nums)
 {
     List<IList<int>> result = new List<IList<int>>();
