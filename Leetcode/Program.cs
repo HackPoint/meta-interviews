@@ -30,11 +30,12 @@ linkedLists.PrintList(l1);
 linkedLists.PrintList(l2);
 linkedLists.PrintList(result);
 */
-
 // Console.WriteLine(LongestValidParentheses("(()"));
 // Console.WriteLine(LongestValidParentheses("(()))())("));
+// Console.WriteLine(FindAnagrams("cbaebabacd", "abc"));
 
-Console.WriteLine(FindAnagrams("cbaebabacd", "abc"));
+
+
 
 IList<int> FindAnagrams(string s, string p)
 {
