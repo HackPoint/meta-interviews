@@ -1,8 +1,8 @@
 using System.Text;
 
-namespace Leetcode;
+namespace Leetcode.Easy.LinkedList.TwoPointer.LinkedLists;
 
-public class LinkedLists
+public class AddTwoNumber
 {
     /// <summary>
     /// Input: l1 = [2,4,3], l2 = [5,6,4]

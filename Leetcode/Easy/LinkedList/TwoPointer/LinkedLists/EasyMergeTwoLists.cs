@@ -1,4 +1,4 @@
-namespace Leetcode.Easy.LinkedList.TwoPointer;
+namespace Leetcode.Easy.LinkedList.TwoPointer.LinkedLists;
 
 public class EasyMergeTwoLists
 {
