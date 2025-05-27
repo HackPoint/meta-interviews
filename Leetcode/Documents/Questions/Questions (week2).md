@@ -13,7 +13,7 @@
 | ⬜  | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array) | Easy | Two Pointers         | 2025-05-24 |
 | ✅  | [Remove Element](https://leetcode.com/problems/remove-element)                                        | Easy  | Two Pointers         | 2025-05-24 |
 | ⬜  | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)  | Easy  | Two Pointers         | 2025-05-24 |
-| ⬜  | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)                                | Easy  | Two Pointers         | 2025-05-24 |
+| ✅ | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)                                | Easy  | Two Pointers         | 2025-05-24 |
 | ✅ | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string)| Easy  | Hash Table           | 2025-05-24 |
 | ✅  | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses)                                  | Easy  | Stack                | 2025-05-24 |
 | ⬜  | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku)                                            | Easy  | Matrix / Hash Set    | 2025-05-24 |
