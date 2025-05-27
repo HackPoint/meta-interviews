@@ -1,18 +1,18 @@
-|     # | Problem 📌 **Easy (6 – All To Do Today):**                                                 | Topic                   |
-| ----: |--------------------------------------------------------------------------------------------| ----------------------- |
-|     1 | ~~[Single Number](https://leetcode.com/problems/single-number)~~                           | XOR logic               |
-| ~~2~~ | ~~[Valid Palindrome](https://leetcode.com/problems/valid-palindrome)~~                     | Two pointers            |
-|     3 | ~~[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)~~         | Linked lists            |
-|     4 | ~~[Maximum Subarray](https://leetcode.com/problems/maximum-subarray)~~                     | Kadane’s Algorithm      |
-|     5 | ~~[Valid Anagram](https://leetcode.com/problems/valid-anagram)~~                           | Hash map                |
-|     6 | ~~[Move Zeroes](https://leetcode.com/problems/move-zeroes)~~                               | Two pointers            |
-|     # | Problem 📌 **Medium (5 – All To Do Today):**                                               | Topic                   |
-|     1 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers)                           | Linked list + carry     |
-|     2 | [~~Container With Most Water~~](https://leetcode.com/problems/container-with-most-water)   | Two-pointer strategy    |
-|     3 | ~~[Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number)~~   | Floyd's cycle detection |
-| ~~4~~ | ~~[Generate Parentheses](https://leetcode.com/problems/generate-parentheses)~~             | Backtracking            |
-|     5 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self) | Prefix/postfix products |
-|       |                                                                                            |                         |
+|     # | Problem 📌 **Easy (6 – All To Do Today):**                                                     | Topic                   |
+| ----: |------------------------------------------------------------------------------------------------| ----------------------- |
+|     1 | ~~[Single Number](https://leetcode.com/problems/single-number)~~                               | XOR logic               |
+| ~~2~~ | ~~[Valid Palindrome](https://leetcode.com/problems/valid-palindrome)~~                         | Two pointers            |
+|     3 | ~~[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)~~             | Linked lists            |
+|     4 | ~~[Maximum Subarray](https://leetcode.com/problems/maximum-subarray)~~                         | Kadane’s Algorithm      |
+|     5 | ~~[Valid Anagram](https://leetcode.com/problems/valid-anagram)~~                               | Hash map                |
+|     6 | ~~[Move Zeroes](https://leetcode.com/problems/move-zeroes)~~                                   | Two pointers            |
+|     # | Problem 📌 **Medium (5 – All To Do Today):**                                                   | Topic                   |
+|     1 | ~~[Add Two Numbers](https://leetcode.com/problems/add-two-numbers)~~                           | Linked list + carry     |
+|     2 | [~~Container With Most Water~~](https://leetcode.com/problems/container-with-most-water)       | Two-pointer strategy    |
+|     3 | ~~[Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number)~~       | Floyd's cycle detection |
+| ~~4~~ | ~~[Generate Parentheses](https://leetcode.com/problems/generate-parentheses)~~                 | Backtracking            |
+|     5 | ~~[Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)~~ | Prefix/postfix products |
+|       |                                                                                                |                         |
 
 ## 📗 Easy (10 total)
 
