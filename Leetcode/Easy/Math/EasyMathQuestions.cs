@@ -12,4 +12,14 @@ public class EasyMathQuestions
         }
         return x == reversed || x == reversed / 10;
     }
+    
+    public int TitleToNumber(string columnTitle) {
+        int result = 0;
+        foreach(char c in columnTitle) {
+            int val = c - 'A' + 1;
+            result = result * 26 + val;
+        }
+
+        return result;
+    }
 }
