@@ -313,21 +313,6 @@ bool IsPalindrome(string s) {
     return true;
 }
 
-int SingleNumber(int[] nums) {
-    int ones = 0, twos = 0;
-
-    foreach (int i in nums) {
-        twos = twos | (ones & i);
-        ones = ones ^ i;
-        int common = ones & twos;
-
-        ones &= ~common;
-        twos &= ~common;
-    }
-
-    return ones;
-}
-
 string LongestPalindrome(string s) {
     int startIndex = 0, maxLen = 0;
 
