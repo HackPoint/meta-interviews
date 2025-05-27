@@ -1,7 +1,10 @@
 ﻿using System.Text;
-using Leetcode;
-using Leetcode.Backtracking;
-using Leetcode.TwoPointers;
+using Leetcode.Easy.Arrays.TwoPointers;
+using Leetcode.Easy.Strings;
+
+var firstUnique = new FirstUniqueCharacterInString();
+firstUnique.FirstUniqChar("leetcode");
+
 
 // ThreeSum([-1, 0, 1, 2, -1, -4]);
 // Console.WriteLine(LongestPalindrome("babad"));
@@ -35,7 +38,8 @@ linkedLists.PrintList(result);
 // Console.WriteLine(FindAnagrams("cbaebabacd", "abc"));
 
 
-
+var removeElements = new RemoveElements();
+removeElements.RemoveElement([0, 1, 2, 2, 3, 0, 4, 2], 2);
 
 IList<int> FindAnagrams(string s, string p)
 {

@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/Users/genadyshmunik/RiderProjects/Leetcode/Leetcode/Leetcode.csproj": {}
+    "/Users/hackpoint/dev/dotnet/meta-interviews/Leetcode/Leetcode.csproj": {}
   },
   "projects": {
-    "/Users/genadyshmunik/RiderProjects/Leetcode/Leetcode/Leetcode.csproj": {
+    "/Users/hackpoint/dev/dotnet/meta-interviews/Leetcode/Leetcode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/genadyshmunik/RiderProjects/Leetcode/Leetcode/Leetcode.csproj",
+        "projectUniqueName": "/Users/hackpoint/dev/dotnet/meta-interviews/Leetcode/Leetcode.csproj",
         "projectName": "Leetcode",
-        "projectPath": "/Users/genadyshmunik/RiderProjects/Leetcode/Leetcode/Leetcode.csproj",
-        "packagesPath": "/Users/genadyshmunik/.nuget/packages/",
-        "outputPath": "/Users/genadyshmunik/RiderProjects/Leetcode/Leetcode/obj/",
+        "projectPath": "/Users/hackpoint/dev/dotnet/meta-interviews/Leetcode/Leetcode.csproj",
+        "packagesPath": "/Users/hackpoint/.nuget/packages/",
+        "outputPath": "/Users/hackpoint/dev/dotnet/meta-interviews/Leetcode/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/genadyshmunik/.nuget/NuGet/NuGet.Config"
+          "/Users/hackpoint/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/Users/genadyshmunik/.nuget/NuGet/LocalNuGetPackages": {},
           "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -38,7 +37,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -61,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
