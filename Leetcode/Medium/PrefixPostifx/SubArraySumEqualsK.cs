@@ -2,6 +2,7 @@ namespace Leetcode.Medium.PrefixPostifx;
 
 public class SubArraySumEqualsK
 {
+    // Approach: Prefix sum + HashMap
     public int SubarraySum(int[] nums, int k) {
         int count = 0;
         int prefixSum = 0;
