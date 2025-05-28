@@ -21,7 +21,7 @@
 | 🔲 | [Jump Game](https://leetcode.com/problems/jump-game)                                             | Medium | Greedy / DP             | 2025-05-24 |
 | 🔲 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence)   | Medium | DP / Binary Search      | 2025-05-24 |
 | 🔲 | [Coin Change](https://leetcode.com/problems/coin-change)                                         | Medium | DP                      | 2025-05-24 |
-| 🔲 | [LRU Cache](https://leetcode.com/problems/lru-cache)                                             | Medium | Design / HashMap + DLL  | 2025-05-24 |
+| ✅  | [LRU Cache](https://leetcode.com/problems/lru-cache)                                             | Medium | Design / HashMap + DLL  | 2025-05-24 |
 | 🔲 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)           | Medium | DP                      | 2025-05-24 |
 | 🔲 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array) | Medium | Heap / Quickselect      | 2025-05-24 |
 | 🔲 | [Rotate Image](https://leetcode.com/problems/rotate-image)                                       | Medium | Matrix manipulation     | 2025-05-24 |
