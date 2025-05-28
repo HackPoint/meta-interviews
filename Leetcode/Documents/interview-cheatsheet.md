@@ -145,7 +145,12 @@
 - You solve a problem **using previous results**
 - Overlapping subproblems
 - You’re optimizing for **max/min/count**
-
+- When to use which ( Fibonacci )
+   -  | Approach       | Use When                        |
+      | -------------- | ------------------------------- |
+      | Recursive      | For understanding, not for perf |
+      | DP Table       | For clarity + debugging         |
+      | Fibonacci Iter | For production performance      |
 **Key indicators:**
 - "Max profit", "Min cost", "Number of ways"
 

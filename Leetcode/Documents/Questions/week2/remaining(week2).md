@@ -4,7 +4,7 @@
 
 | 🔲 | Problem                                                                                            | Level | Topic               | Date       |
 |----|----------------------------------------------------------------------------------------------------|-------|---------------------|------------|
-| 🔲 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)                                   | Easy  | DP                  | 2025-05-24 |
+| ✅ | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)                                   | Easy  | DP                  | 2025-05-24 |
 | 🔲 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)   | Easy  | Greedy              | 2025-05-24 |
 | ✅  | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists) | Easy  | Linked List         | 2025-05-24 |
 | ✅  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list)                     | Easy  | Linked List + Stack | 2025-05-24 |
