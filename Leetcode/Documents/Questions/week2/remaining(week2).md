@@ -16,7 +16,7 @@
 
 | 🔲 | Problem                                                                                          | Level  | Topic                   | Date       |
 |----|--------------------------------------------------------------------------------------------------|--------|-------------------------|------------|
-| 🔲 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k)                     | Medium | Prefix Sum / HashMap    | 2025-05-24 |
+| ✅  | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k)                     | Medium | Prefix Sum / HashMap    | 2025-05-24 |
 | 🔲 | [Word Break](https://leetcode.com/problems/word-break)                                           | Medium | DP / Trie / Memoization | 2025-05-24 |
 | 🔲 | [Jump Game](https://leetcode.com/problems/jump-game)                                             | Medium | Greedy / DP             | 2025-05-24 |
 | 🔲 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence)   | Medium | DP / Binary Search      | 2025-05-24 |
