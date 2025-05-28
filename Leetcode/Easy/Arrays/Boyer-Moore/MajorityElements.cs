@@ -1,4 +1,4 @@
-namespace Leetcode.Easy.Arrays;
+namespace Leetcode.Easy.Arrays.Boyer_Moore;
 
 public class MajorityElements
 {
