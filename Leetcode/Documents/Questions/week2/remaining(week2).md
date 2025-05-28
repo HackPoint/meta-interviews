@@ -25,8 +25,8 @@
 | 🔲 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)           | Medium | DP                      | 2025-05-24 |
 | 🔲 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array) | Medium | Heap / Quickselect      | 2025-05-24 |
 | 🔲 | [Rotate Image](https://leetcode.com/problems/rotate-image)                                       | Medium | Matrix manipulation     | 2025-05-24 |
-| 🔲 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)                 | Medium | Heap + HashMap          | 2025-05-24 |
-| 🔲 | [Group Anagrams](https://leetcode.com/problems/group-anagrams)                                   | Medium | Hash Map + Sorting      | 2025-05-24 |
+| ✅ | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)                 | Medium | Heap + HashMap          | 2025-05-24 |
+| ✅ | [Group Anagrams](https://leetcode.com/problems/group-anagrams)                                   | Medium | Hash Map + Sorting      | 2025-05-24 |
 
 ---
 
