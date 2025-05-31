@@ -1,4 +1,4 @@
-namespace Leetcode.Medium.Arrays;
+namespace Leetcode.Easy.Arrays;
 
 public class TwoSums {
     public int[] TwoSum(int[] numbers, int target) {

@@ -177,57 +177,9 @@ string MinWindow(string s, string t) {
 }
 
 
-/*
- * Input: n=3
- * Output: ["((()))","(()())","(())()","()(())","()()()"]
- */
-// GenerateParenthesis(3);
-IList<string> GenerateParenthesis(int n) {
-    IList<string> result = new List<string>();
-    Backtrack(new StringBuilder(), 0, 0, n, result);
-    Console.WriteLine(string.Join("\n", result.Select(list => "[" + string.Join(", ", list) + "]")));
-    return result;
-}
 
-void Backtrack(StringBuilder sb, int open, int close, int depth, IList<string> result) {
-    if (sb.Length == 2 * depth) {
-        result.Add(sb.ToString());
-        return;
-    }
 
-    if (open < depth) {
-        sb.Append('(');
-        Backtrack(sb, open + 1, close, depth, result);
-        sb.Length--;
-    }
 
-    if (close < open) {
-        sb.Append(')');
-        Backtrack(sb, open, close + 1, depth, result);
-        sb.Length--;
-    }
-}
-
-int MaxArea(int[] height) {
-    int maxArea = 0;
-    int left = 0, right = height.Length - 1;
-
-    while (left < right) {
-        int h = Math.Min(height[left], height[right]);
-        int w = right - left;
-        int area = h * w;
-        maxArea = Math.Max(maxArea, area);
-
-        if (height[left] < height[right]) {
-            left++;
-        }
-        else {
-            right--;
-        }
-    }
-
-    return maxArea;
-}
 
 int MaxSubArray(int[] nums) {
     int maxSum = int.MinValue;
@@ -244,24 +196,7 @@ int MaxSubArray(int[] nums) {
     return maxSum;
 }
 
-int FindDuplicate(int[] nums) {
-    int slow = nums[0];
-    int fast = nums[0];
 
-    do {
-        slow = nums[slow];
-        fast = nums[nums[fast]];
-    } while (fast != slow);
-
-    slow = nums[0];
-
-    while (slow != fast) {
-        slow = nums[slow];
-        fast = nums[fast];
-    }
-
-    return slow;
-}
 
 bool IsPalindrome(string s) {
     int left = 0, right = s.Length - 1;
@@ -280,60 +215,4 @@ bool IsPalindrome(string s) {
     return true;
 }
 
-string LongestPalindrome(string s) {
-    int startIndex = 0, maxLen = 0;
 
-    for (int i = 0; i < s.Length; ++i) {
-        int len1 = ExpandAroundCenter(s, i, i);
-        int len2 = ExpandAroundCenter(s, i, i + 1);
-        int len = Math.Max(len1, len2);
-
-        if (len > maxLen) {
-            maxLen = len;
-            startIndex = i - (len - 1) / 2;
-        }
-    }
-
-    return s.Substring(startIndex, maxLen);
-}
-
-int ExpandAroundCenter(string s, int left, int right) {
-    while (left >= 0 && right < s.Length && s[left] == s[right]) {
-        left--;
-        right++;
-    }
-
-    return right - left - 1;
-}
-
-IList<IList<int>> ThreeSum(int[] nums) {
-    List<IList<int>> result = new List<IList<int>>();
-    Array.Sort(nums);
-    for (int i = 0; i < nums.Length; i++) {
-        if (i > 0 && nums[i] == nums[i - 1]) continue;
-
-        int left = i + 1;
-        int right = nums.Length - 1;
-        while (left < right) {
-            int sum = nums[i] + nums[left] + nums[right];
-            if (sum == 0) {
-                result.Add(new List<int> { nums[i], nums[left], nums[right] });
-
-                while (left < right && nums[left] == nums[left + 1]) left++;
-                while (left < right && nums[right] == nums[right - 1]) right--;
-
-                left++;
-                right--;
-            }
-            else if (sum < 0) {
-                left++;
-            }
-            else {
-                right--;
-            }
-        }
-    }
-
-    // Console.WriteLine(string.Join("\n", result.Select(list => "[" + string.Join(", ", list) + "]")));
-    return result;
-}
