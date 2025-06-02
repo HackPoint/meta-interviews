@@ -7,10 +7,8 @@ public class FindMedianSortedArray {
             (nums1, nums2) = (nums2, nums1);
         }
 
-
         int m = nums1.Length;
         int n = nums2.Length;
-
 
         int low = 0, high = m;
 
