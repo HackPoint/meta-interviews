@@ -78,7 +78,7 @@
 | ⬜ | [Maximal Network Rank](https://leetcode.com/problems/maximal-network-rank)                                                               | Hard  | Graph                         | 2025-05-31 |
 | ⬜ | [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city)                                                         | Hard  | TreeMap, Greedy               | 2025-05-31 |
 | ⬜ | [Remove Boxes](https://leetcode.com/problems/remove-boxes)                                                                               | Hard  | DP, 3D                        | 2025-05-31 |
-| ⬜ | [Jump Game V](https://leetcode.com/problems/jump-game-v)                                                                                 | Hard  | DFS + DP                      | 2025-05-31 |
+| ✅ | [Jump Game V](https://leetcode.com/problems/jump-game-v)                                                                                 | Hard  | DFS + DP                      | 2025-05-31 |
 | ⬜ | [Minimum Cost to Hire K Workers](https://leetcode.com/problems/minimum-cost-to-hire-k-workers)                                           | Hard  | Heap, Greedy                  | 2025-05-31 |
 | ⬜ | [Reachable Nodes in Subdivided Graph](https://leetcode.com/problems/reachable-nodes-in-subdivided-graph)                                 | Hard  | Graph, Dijkstra               | 2025-05-31 |
 | ⬜ | [Guess the Word](https://leetcode.com/problems/guess-the-word)                                                                           | Hard  | Minimax, Simulation           | 2025-05-31 |
