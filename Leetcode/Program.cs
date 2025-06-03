@@ -1,9 +1,14 @@
 ﻿using System.Text;
 using Leetcode.Easy.Arrays.TwoPointers;
+using Leetcode.Easy.LinkedList.TwoPointer.Strings;
 using Leetcode.Easy.Strings;
 
-var firstUnique = new FirstUniqueCharacterInString();
-firstUnique.FirstUniqChar("leetcode");
+LongestCommonPrefixes
+    prefixes = new LongestCommonPrefixes();
+prefixes.LongestCommonPrefix(["flower", "flow", "flight"]);
+
+// var firstUnique = new FirstUniqueCharacterInString();
+// firstUnique.FirstUniqChar("leetcode");
 
 
 // ThreeSum([-1, 0, 1, 2, -1, -4]);
