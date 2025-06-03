@@ -1,8 +1,13 @@
-﻿using Leetcode.Easy.Strings;
+﻿
 
-FindWordsThatCanBeFormedByCharacters characters =
-    new FindWordsThatCanBeFormedByCharacters();
-characters.CountCharacters(["cat", "bt", "hat", "tree"], "atach");
+using Leetcode.Medium.Strings;
+
+LongestPalindromes longestPalindromes = new LongestPalindromes();
+longestPalindromes.LongestPalindrome("abccccdd");
+
+// FindWordsThatCanBeFormedByCharacters characters =
+//     new FindWordsThatCanBeFormedByCharacters();
+// characters.CountCharacters(["cat", "bt", "hat", "tree"], "atach");
 
 // LongestWordInDictionary longestWordInDictionary = new LongestWordInDictionary();
 // longestWordInDictionary.LongestWord(["w", "wo", "wor", "worl", "world"]);
