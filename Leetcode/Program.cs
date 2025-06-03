@@ -1,11 +1,11 @@
-﻿using System.Text;
-using Leetcode.Easy.Arrays.TwoPointers;
-using Leetcode.Easy.LinkedList.TwoPointer.Strings;
-using Leetcode.Easy.Strings;
-using Leetcode.Medium.Strings;
+﻿using Leetcode.Easy.Strings;
 
-LongestWordInDictionary longestWordInDictionary = new LongestWordInDictionary();
-longestWordInDictionary.LongestWord(["w", "wo", "wor", "worl", "world"]);
+FindWordsThatCanBeFormedByCharacters characters =
+    new FindWordsThatCanBeFormedByCharacters();
+characters.CountCharacters(["cat", "bt", "hat", "tree"], "atach");
+
+// LongestWordInDictionary longestWordInDictionary = new LongestWordInDictionary();
+// longestWordInDictionary.LongestWord(["w", "wo", "wor", "worl", "world"]);
 
 // var firstUnique = new FirstUniqueCharacterInString();
 // firstUnique.FirstUniqChar("leetcode");
@@ -42,10 +42,11 @@ linkedLists.PrintList(result);
 // Console.WriteLine(LongestValidParentheses("(()))())("));
 // Console.WriteLine(FindAnagrams("cbaebabacd", "abc"));
 
-var merge = new MergeSortedArrays();
-merge.Merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
+// var merge = new MergeSortedArrays();
+// merge.Merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
 
-IList<int> FindAnagrams(string s, string p) {
+IList<int> FindAnagrams(string s, string p)
+{
     var result = new List<int>();
     if (s.Length < p.Length) return result;
     Span<int> need = stackalloc int[26];
@@ -55,15 +56,18 @@ IList<int> FindAnagrams(string s, string p) {
     foreach (char c in p)
         need[c - 'a']++;
 
-    for (int right = 0; right < s.Length; right++) {
+    for (int right = 0; right < s.Length; right++)
+    {
         window[s[right] - 'a']++;
 
-        if (right - left + 1 > p.Length) {
+        if (right - left + 1 > p.Length)
+        {
             window[s[left] - 'a']--;
             left++;
         }
 
-        if (right - left + 1 == p.Length && window.SequenceEqual(need)) {
+        if (right - left + 1 == p.Length && window.SequenceEqual(need))
+        {
             result.Add(left);
         }
     }
@@ -72,21 +76,27 @@ IList<int> FindAnagrams(string s, string p) {
     return result;
 }
 
-int LongestValidParentheses(string s) {
+int LongestValidParentheses(string s)
+{
     char open = '(';
     int maxLength = 0;
     var stack = new Stack<int>();
     stack.Push(-1);
-    for (int i = 0; i < s.Length; i++) {
-        if (s[i] == open) {
+    for (int i = 0; i < s.Length; i++)
+    {
+        if (s[i] == open)
+        {
             stack.Push(i);
         }
-        else {
+        else
+        {
             stack.Pop();
-            if (stack.Count == 0) {
+            if (stack.Count == 0)
+            {
                 stack.Push(i);
             }
-            else {
+            else
+            {
                 maxLength = Math.Max(maxLength, i - stack.Peek());
             }
         }
@@ -99,11 +109,13 @@ int LongestValidParentheses(string s) {
  * Input: digits = "23"
    Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
  */
-IList<string> LetterCombinations(string digits) {
+IList<string> LetterCombinations(string digits)
+{
     if (string.IsNullOrEmpty(digits)) return [];
     var result = new List<string>();
     Span<char> freq = stackalloc char[digits.Length];
-    var map = new[] {
+    var map = new[]
+    {
         "", "", "abc", "def", "ghi", "jkl",
         "mno", "pqrs", "tuv", "wxyz"
     };
@@ -113,14 +125,17 @@ IList<string> LetterCombinations(string digits) {
     return result;
 }
 
-void BacktrackPhoneCombinations(int index, string digits, Span<char> buffer, string[] map, IList<string> result) {
-    if (index == digits.Length) {
+void BacktrackPhoneCombinations(int index, string digits, Span<char> buffer, string[] map, IList<string> result)
+{
+    if (index == digits.Length)
+    {
         result.Add(new string(buffer));
         return;
     }
 
     var letters = map[digits[index] - '0'];
-    foreach (var letter in letters) {
+    foreach (var letter in letters)
+    {
         buffer[index] = letter;
         BacktrackPhoneCombinations(index + 1, digits, buffer, map, result);
     }
@@ -133,12 +148,14 @@ void BacktrackPhoneCombinations(int index, string digits, Span<char> buffer, str
    Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
    Approach: Sliding window
  */
-string MinWindow(string s, string t) {
+string MinWindow(string s, string t)
+{
     if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(t) || s.Length < t.Length)
         return "";
 
     var need = new Dictionary<char, int>();
-    foreach (char c in t) {
+    foreach (char c in t)
+    {
         need.TryAdd(c, 0);
         need[c]++;
     }
@@ -150,17 +167,21 @@ string MinWindow(string s, string t) {
     int minLen = int.MaxValue;
     int start = 0;
 
-    while (right < s.Length) {
+    while (right < s.Length)
+    {
         char c = s[right];
         have.TryAdd(c, 0);
         have[c]++;
 
-        if (need.ContainsKey(c) && have[c] == need[c]) {
+        if (need.ContainsKey(c) && have[c] == need[c])
+        {
             formed++;
         }
 
-        while (formed == required) {
-            if (right - left + 1 < minLen) {
+        while (formed == required)
+        {
+            if (right - left + 1 < minLen)
+            {
                 minLen = right - left + 1;
                 start = left;
             }
@@ -168,7 +189,8 @@ string MinWindow(string s, string t) {
             char leftChar = s[left];
             have[leftChar]--;
 
-            if (need.ContainsKey(leftChar) && have[leftChar] < need[leftChar]) {
+            if (need.ContainsKey(leftChar) && have[leftChar] < need[leftChar])
+            {
                 formed--;
             }
 
@@ -182,18 +204,17 @@ string MinWindow(string s, string t) {
 }
 
 
-
-
-
-
-int MaxSubArray(int[] nums) {
+int MaxSubArray(int[] nums)
+{
     int maxSum = int.MinValue;
     int currentSum = 0;
 
-    foreach (int num in nums) {
+    foreach (int num in nums)
+    {
         currentSum += num;
         maxSum = Math.Max(currentSum, maxSum);
-        if (currentSum < 0) {
+        if (currentSum < 0)
+        {
             currentSum = 0;
         }
     }
@@ -202,11 +223,12 @@ int MaxSubArray(int[] nums) {
 }
 
 
-
-bool IsPalindrome(string s) {
+bool IsPalindrome(string s)
+{
     int left = 0, right = s.Length - 1;
 
-    while (left < right) {
+    while (left < right)
+    {
         while (left < right && !char.IsLetterOrDigit(s[left])) left++;
         while (left < right && !char.IsLetterOrDigit(s[right])) right--;
 
@@ -219,5 +241,3 @@ bool IsPalindrome(string s) {
 
     return true;
 }
-
-
