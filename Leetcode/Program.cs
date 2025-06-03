@@ -2,10 +2,10 @@
 using Leetcode.Easy.Arrays.TwoPointers;
 using Leetcode.Easy.LinkedList.TwoPointer.Strings;
 using Leetcode.Easy.Strings;
+using Leetcode.Medium.Strings;
 
-LongestCommonPrefixes
-    prefixes = new LongestCommonPrefixes();
-prefixes.LongestCommonPrefix(["flower", "flow", "flight"]);
+LongestWordInDictionary longestWordInDictionary = new LongestWordInDictionary();
+longestWordInDictionary.LongestWord(["w", "wo", "wor", "worl", "world"]);
 
 // var firstUnique = new FirstUniqueCharacterInString();
 // firstUnique.FirstUniqChar("leetcode");
