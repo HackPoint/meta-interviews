@@ -1,13 +1,4 @@
-﻿Console.WriteLine(LengthOfLastWord( "Hello World"));
-Console.WriteLine(LengthOfLastWord("   fly me   to   the moon  "));
-Console.WriteLine(LengthOfLastWord("luffy is still joyboy"));
-
-int LengthOfLastWord(string s)
-{
-    return s.Trim().Split(' ')[^1].Length;
-}
-
-IList<int> FindAnagrams(string s, string p)
+﻿IList<int> FindAnagrams(string s, string p)
 {
     var result = new List<int>();
     if (s.Length < p.Length) return result;
