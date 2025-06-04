@@ -1,9 +1,9 @@
-﻿
+﻿//DetectCapitalUse("USA");
+//DetectCapitalUse("leetcode");
 
-using Leetcode.Easy.Strings;
-
-ValidAnagram anagram = new();
-anagram.IsAnagram("anagram", "nagaram");
+// DetectCapitalUse("Google");
+// ValidAnagram anagram = new();
+// anagram.IsAnagram("anagram", "nagaram");
 
 // LongestPalindromes longestPalindromes = new LongestPalindromes();
 // longestPalindromes.LongestPalindrome("abccccdd");
