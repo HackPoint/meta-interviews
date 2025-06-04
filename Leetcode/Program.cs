@@ -53,6 +53,10 @@ linkedLists.PrintList(result);
 // var merge = new MergeSortedArrays();
 // merge.Merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 IList<int> FindAnagrams(string s, string p)
 {
     var result = new List<int>();
