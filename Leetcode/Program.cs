@@ -1,61 +1,11 @@
-﻿//DetectCapitalUse("USA");
-//DetectCapitalUse("leetcode");
+﻿Console.WriteLine(LengthOfLastWord( "Hello World"));
+Console.WriteLine(LengthOfLastWord("   fly me   to   the moon  "));
+Console.WriteLine(LengthOfLastWord("luffy is still joyboy"));
 
-// DetectCapitalUse("Google");
-// ValidAnagram anagram = new();
-// anagram.IsAnagram("anagram", "nagaram");
-
-// LongestPalindromes longestPalindromes = new LongestPalindromes();
-// longestPalindromes.LongestPalindrome("abccccdd");
-
-// FindWordsThatCanBeFormedByCharacters characters =
-//     new FindWordsThatCanBeFormedByCharacters();
-// characters.CountCharacters(["cat", "bt", "hat", "tree"], "atach");
-
-// LongestWordInDictionary longestWordInDictionary = new LongestWordInDictionary();
-// longestWordInDictionary.LongestWord(["w", "wo", "wor", "worl", "world"]);
-
-// var firstUnique = new FirstUniqueCharacterInString();
-// firstUnique.FirstUniqChar("leetcode");
-
-
-// ThreeSum([-1, 0, 1, 2, -1, -4]);
-// Console.WriteLine(LongestPalindrome("babad"));
-// Console.WriteLine(LongestPalindrome("a"));
-// Console.WriteLine(SingleNumber([4, 1, 2, 1, 2]));
-// Console.WriteLine(MaxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
-// Console.WriteLine(MaxArea( [1,8,6,2,5,4,8,3,7]));
-// Console.WriteLine(MinWindow("ADOBECODEBANC", "ABC"));
-// GroupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]);
-// LetterCombinations("23");
-//var letterCombinations = new LetterCombinationsPerformanceImprovement();
-//letterCombinations.LetterCombinations("23");
-// TrapWater trapWater = new TrapWater();
-// Console.WriteLine(trapWater.Trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]));
-// Console.WriteLine(trapWater.Trap([4, 2, 0, 3, 2, 5]));
-/*
-LinkedLists linkedLists = new LinkedLists();
-
-var l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
-var l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
-
-
-
-var result = linkedLists.AddTwoNumbers(l1, l2);
-linkedLists.PrintList(l1);
-linkedLists.PrintList(l2);
-linkedLists.PrintList(result);
-*/
-// Console.WriteLine(LongestValidParentheses("(()"));
-// Console.WriteLine(LongestValidParentheses("(()))())("));
-// Console.WriteLine(FindAnagrams("cbaebabacd", "abc"));
-
-// var merge = new MergeSortedArrays();
-// merge.Merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
+int LengthOfLastWord(string s)
+{
+    return s.Trim().Split(' ')[^1].Length;
+}
 
 IList<int> FindAnagrams(string s, string p)
 {
