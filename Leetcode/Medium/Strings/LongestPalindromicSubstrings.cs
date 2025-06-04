@@ -1,4 +1,4 @@
-namespace Leetcode.Medium.LinkedLists;
+namespace Leetcode.Medium.Strings;
 
 public class LongestPalindromicSubstrings {
     string LongestPalindrome(string s) {

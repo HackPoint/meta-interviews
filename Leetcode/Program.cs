@@ -1,9 +1,12 @@
 ﻿
 
-using Leetcode.Medium.Strings;
+using Leetcode.Easy.Strings;
 
-LongestPalindromes longestPalindromes = new LongestPalindromes();
-longestPalindromes.LongestPalindrome("abccccdd");
+ValidAnagram anagram = new();
+anagram.IsAnagram("anagram", "nagaram");
+
+// LongestPalindromes longestPalindromes = new LongestPalindromes();
+// longestPalindromes.LongestPalindrome("abccccdd");
 
 // FindWordsThatCanBeFormedByCharacters characters =
 //     new FindWordsThatCanBeFormedByCharacters();
