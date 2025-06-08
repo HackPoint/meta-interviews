@@ -1,4 +1,4 @@
-namespace Leetcode.DSA;
+namespace Leetcode.DSA.DataStructures;
 
 public class SegmentTree
 {
