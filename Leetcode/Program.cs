@@ -1,11 +1,4 @@
-﻿using Leetcode.Hard.DP;
-
-MaxSumOfSubsequenceWithNonAdjacentElements adjacentElements
-    = new MaxSumOfSubsequenceWithNonAdjacentElements();
-
-adjacentElements.MaximumSumSubsequence([0, 3, 3, 3, 1, -2], [[4, 0], [1, 0]]);
-
-IList<int> FindAnagrams(string s, string p)
+﻿IList<int> FindAnagrams(string s, string p)
 {
     var result = new List<int>();
     if (s.Length < p.Length) return result;
