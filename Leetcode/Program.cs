@@ -1,8 +1,4 @@
 ﻿
-using Leetcode.Easy.Strings;
-
-RemoveAllAdjacentDuplicatesInString adjacentDuplicatesInString = new RemoveAllAdjacentDuplicatesInString();
-adjacentDuplicatesInString.RemoveDuplicates("abbaca");
 IList<int> FindAnagrams(string s, string p)
 {
     var result = new List<int>();
