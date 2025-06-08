@@ -156,26 +156,6 @@ string MinWindow(string s, string t)
     return minLen == int.MaxValue ? "" : s.Substring(start, minLen);
 }
 
-
-int MaxSubArray(int[] nums)
-{
-    int maxSum = int.MinValue;
-    int currentSum = 0;
-
-    foreach (int num in nums)
-    {
-        currentSum += num;
-        maxSum = Math.Max(currentSum, maxSum);
-        if (currentSum < 0)
-        {
-            currentSum = 0;
-        }
-    }
-
-    return maxSum;
-}
-
-
 bool IsPalindrome(string s)
 {
     int left = 0, right = s.Length - 1;
