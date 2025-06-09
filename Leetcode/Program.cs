@@ -1,4 +1,28 @@
 ﻿
+
+
+
+using Leetcode.Easy.LinkedList.DFS;
+using Leetcode.Medium.BT;
+
+var trees = new AllPossibleFbtPossible().AllPossibleFBT(7);
+foreach (var tree in trees)
+{
+    Print(tree);
+    Console.WriteLine("-------");
+}
+
+
+void Print(TreeNode node, string indent = "", bool isLeft = true)
+{
+    if (node == null) return;
+
+    Console.WriteLine($"{indent}{(isLeft ? "├──" : "└──")}{node.val}");
+    Print(node.left, indent + (isLeft ? "│   " : "    "), true);
+    Print(node.right, indent + (isLeft ? "│   " : "    "), false);
+}
+
+
 IList<int> FindAnagrams(string s, string p)
 {
     var result = new List<int>();
