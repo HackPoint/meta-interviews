@@ -1,4 +1,4 @@
-namespace Leetcode.Easy.Stacks;
+namespace Leetcode.Medium.Strings;
 
 public class ScoreOfParenthesess
 {
