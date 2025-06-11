@@ -1,4 +1,5 @@
 using Leetcode.Design.Easy;
+using Leetcode.Design.Medium.Hashmap;
 using Xunit;
 
 namespace Leetcode.Design.Tests;

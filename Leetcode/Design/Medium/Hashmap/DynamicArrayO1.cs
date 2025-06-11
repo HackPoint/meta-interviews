@@ -1,4 +1,4 @@
-namespace Leetcode.Design.Easy;
+namespace Leetcode.Design.Medium.Hashmap;
 
 public class DynamicArrayO1
 {
