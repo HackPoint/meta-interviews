@@ -1,227 +1,291 @@
-## 🔁 **1. Two Pointers**
+## 🧠 0. How to Decide Algorithm Type
 
-**Use when:**
-- You’re working with a **sorted array** or **palindrome**
-- Need to find **pairs** or **subarrays** meeting a condition
+Ask these guiding questions:
 
-**Key indicators:**
-- "Find pair that sums to target"
-- "Compare elements from both ends"
-- "In-place operations"
+| Question                              | Strategy                            |
+| ------------------------------------- | ----------------------------------- |
+| "Is array sorted / can I sort it?"    | Two Pointers, Greedy, Binary Search |
+| "Do I scan ranges / substrings?"      | Sliding Window, Prefix Sum          |
+| "Need optimal count/min/max result?"  | Dynamic Programming                 |
+| "All combinations / all valid paths?" | Backtracking or DFS                 |
+| "Shortest path / minimum steps?"      | BFS (especially on grids/graphs)    |
+| "Cyclic behavior or repeated state?"  | Fast-Slow Pointers, Floyd’s         |
+| "Unique item / bit behavior?"         | Bit Manipulation, XOR               |
+| "Graph / tree traversal?"             | DFS/BFS, Recursion                  |
 
-**Common operations:**
-- `left++`, `right--` (shrinking)
-- One pointer iterates, the other moves as needed
+---
+
+## 🔁 1. Two Pointers
+
+**Use When:**
+
+* You're dealing with sorted arrays or palindromes
+* Need to **find pairs**, shrink windows, or move from both ends
+
+**Key Phrases:**
+
+* "Find pair that sums to X"
+* "Remove duplicates in-place"
+* "Compare from both ends"
+
+**Common Pattern:**
+
+* `left++`, `right--` or iterate `j` while fixing `i`
 
 **Examples:**
-- `Two Sum II - Input Array Is Sorted`
-- `Valid Palindrome`
-- `3Sum`
+
+* Two Sum II (Sorted Input)
+* Valid Palindrome
+* 3Sum
+
 ---
-## 🔀 **2. Sliding Window**
 
-**Use when:**
-- You need to track a **subarray/substring** meeting a dynamic condition
-- Look for **longest**, **shortest**, or **fixed length**
+## 🔀 2. Sliding Window
 
-**Key indicators:**
-- "Substring", "Subarray"
-- "At most / at least k", "no duplicates"
+**Use When:**
+
+* You need to find or optimize a **subarray/substring**
+* “Longest/Shortest substring that satisfies condition”
 
 **Variants:**
-- Fixed window (length `k`)
-- Dynamic window (until condition breaks)
+
+* **Fixed-size**: e.g., max average of size k
+* **Dynamic-size**: grow/shrink until condition fails
+
+**Key Phrases:**
+
+* “Substring with...”
+* “At most / at least k”
+* “No duplicates, distinct elements”
 
 **Examples:**
-- `Longest Substring Without Repeating Characters`
-- `Minimum Size Subarray Sum`
-- `Permutation in String`
+
+* Longest Substring Without Repeating Characters
+* Minimum Size Subarray Sum
+* Permutation in String
 
 ---
-## 🔁 **3. Fast & Slow Pointers (Cycle Detection)**
 
-**Use when:**
-- The array or structure acts like a **linked list**
-- Need to **detect cycles** or find **entry point**
+## 🔁 3. Fast & Slow Pointers (Floyd’s Cycle Detection)
 
-**Key indicators:**
-- "Repeated element"
-- "Cycle in linked list"
+**Use When:**
+
+* You suspect **cycle detection** or **duplicate values** in structure that acts like a list
+
+**Key Phrases:**
+
+* "Detect cycle"
+* "Find duplicate without extra space"
+* "Find start of cycle"
 
 **Examples:**
-- `Linked List Cycle`
-- `Find the Duplicate Number` (Floyd’s Algorithm)
+
+* Linked List Cycle
+* Find the Duplicate Number
+* Happy Number
 
 ---
-## 🧮 **4. Prefix Sum**
 
-**Use when:**
-- You do **repeated range sum queries**
-- Need to check for **subarray conditions**
+## 🧮 4. Prefix Sum
 
-**Key indicators:**
-- "Sum between i and j"
-- "Subarrays with a given sum"
+**Use When:**
+
+* You need to **calculate subarray sums efficiently**
+* Repeated sum range queries or target sum checks
+
+**Key Phrases:**
+
+* “Sum of range (i, j)”
+* “Number of subarrays with sum K”
 
 **Examples:**
-- `Subarray Sum Equals K`
-- `Product of Array Except Self`
+
+* Subarray Sum Equals K
+* Range Sum Query
+* Product of Array Except Self
 
 ---
 
-## 🔁 **5. Sorting**
+## 🔁 5. Sorting
 
-**Use when:**
-- You need to simplify comparison, group elements
-- You want to make **greedy decisions** or **pairing**
+**Use When:**
 
-**Key indicators:**
-- "Closest", "minimum moves", "group similar"
+* You can simplify logic by sorting first
+* Often paired with two pointers or greedy
 
-**Common sorts:**
-- `Array.Sort()`
-- Custom comparator
+**Key Phrases:**
+
+* “Group items”
+* “Min moves”, “Closest pair”, “Earliest time”
 
 **Examples:**
-- `Merge Intervals`
-- `Meeting Rooms`
-- `Kth Largest Element`
+
+* Merge Intervals
+* Meeting Rooms
+* Kth Largest Element
 
 ---
 
-## 🌲 **6. Depth-First Search (DFS)**
+## 🌲 6. Depth-First Search (DFS)
 
-**Use when:**
-- You need to **explore all paths**
-- Solve **recursively** or simulate **backtracking**
-- Graph/tree traversal
+**Use When:**
 
-**Key indicators:**
-- "All paths", "Reachability", "Maze"
-- Use with stack or recursion
+* You need to explore **all paths**, trees, or graphs
+* Use recursion or explicit stack
+
+**Key Phrases:**
+
+* “Count all paths”, “Can reach X?”
+* “Recursive backtracking”
 
 **Examples:**
-- `Number of Islands`
-- `Binary Tree Paths`
-- `Clone Graph`
+
+* Number of Islands
+* Clone Graph
+* Binary Tree Paths
 
 ---
-## 🌊 **7. Breadth-First Search (BFS)**
 
-**Use when:**
-- You need to find **shortest path in unweighted graph**
-- Explore **level-by-level** or **minimum steps**
+## 🌊 7. Breadth-First Search (BFS)
 
-**Key indicators:**
-- "Fewest moves", "Minimum operations", "Level order"
+**Use When:**
+
+* You want the **shortest path** or **minimum steps**
+* Graph traversal or grid exploration **level-by-level**
+
+**Key Phrases:**
+
+* “Minimum steps to...”
+* “Fewest number of operations”
 
 **Examples:**
-- `Word Ladder`
-- `Rotting Oranges`
-- `Binary Tree Level Order Traversal`
+
+* Word Ladder
+* Rotting Oranges
+* Binary Tree Level Order Traversal
 
 ---
 
-## ⛏️ **8. Backtracking**
+## ⛏️ 8. Backtracking
 
-**Use when:**
-- You need to **generate all combinations**
-- Problem has **constraints** and **pruning**
+**Use When:**
 
-**Key indicators:**
-- "Find all valid", "Generate all combinations"
-- Needs **undoing a choice**
+* You’re **generating combinations**, permutations, or solving **constraint problems**
+
+**Key Phrases:**
+
+* “Find all valid...”
+* “Generate all ways...”
+* “Return all combinations”
 
 **Examples:**
-- `Generate Parentheses`
-- `N-Queens`
-- `Subsets`, `Permutations`
+
+* N-Queens
+* Subsets, Permutations
+* Word Search
 
 ---
 
-## 📐 **9. Dynamic Programming (DP)**
+## 📐 9. Dynamic Programming (DP)
 
-**Use when:**
-- You solve a problem **using previous results**
-- Overlapping subproblems
-- You’re optimizing for **max/min/count**
-- When to use which ( Fibonacci )
-   -  | Approach       | Use When                        |
-      | -------------- | ------------------------------- |
-      | Recursive      | For understanding, not for perf |
-      | DP Table       | For clarity + debugging         |
-      | Fibonacci Iter | For production performance      |
-**Key indicators:**
-- "Max profit", "Min cost", "Number of ways"
+**Use When:**
 
-**DP types:**
-- 1D (e.g., Fibonacci)
-- 2D (e.g., Longest Common Subsequence)
-- Knapsack-style
+* You can break the problem into **subproblems**
+* The problem involves **optimization**: max/min/count
+
+**Key Phrases:**
+
+* “Max profit”, “Min cost”, “Number of ways”
+
+**DP Variants:**
+
+* 1D DP (e.g., Climbing Stairs)
+* 2D DP (e.g., Longest Common Subsequence)
+* Knapsack-style (capacity, weights)
+* State DP (cache by multiple variables)
 
 **Examples:**
-- `Climbing Stairs`
-- `House Robber`
-- `Longest Palindromic Subsequence`
+
+* Longest Increasing Subsequence
+* House Robber
+* Edit Distance
 
 ---
 
-## 🔧 **10. Greedy**
+## 🔧 10. Greedy
 
-**Use when:**
-- You can make **locally optimal choices** that lead to a global solution
-- Sorting + decision
+**Use When:**
 
-**Key indicators:**
-- "Minimize", "Maximize", "Earliest", "Last"
+* You can make **locally optimal decisions** that build to global solution
+* Sorting is often a first step
+
+**Key Phrases:**
+
+* “Maximize”, “Minimize”, “Earliest”, “Non-overlapping”
 
 **Examples:**
-- `Jump Game`
-- `Non-overlapping Intervals`
-- `Gas Station`
+
+* Jump Game
+* Non-overlapping Intervals
+* Gas Station
 
 ---
 
-## ⚡ **11. Bit Manipulation**
+## ⚡ 11. Bit Manipulation
 
-**Use when:**
-- Working with **binary digits**, flags, or optimizing space
+**Use When:**
 
-**Key indicators:**
-- "Number appears once"
-- "Flip bits", "Set/unset/check bit"
+* You need to **optimize space** or do **binary logic**
+* Set, unset, or check bits; XOR tricks
+
+**Key Phrases:**
+
+* “Number appears once”
+* “Bitwise trick”
+* “Power of two”
 
 **Examples:**
-- `Single Number`
-- `Power of Two`
-- `Counting Bits`
+
+* Single Number
+* Counting Bits
+* Subsets (binary masks)
 
 ---
 
-## 🌳 **12. Tree/Graph + Recursion**
+## 🌳 12. Tree & Graph Recursion
 
-**Use when:**
-- You must traverse all nodes
-- Build or break down based on **recursive structure**
+**Use When:**
+
+* You must **traverse, build or reduce** hierarchical data
+* Requires bottom-up or top-down analysis
 
 **Examples:**
-- `Binary Tree Maximum Path Sum`
-- `Lowest Common Ancestor`
+
+* Lowest Common Ancestor
+* Binary Tree Maximum Path Sum
+* Serialize/Deserialize Tree
 
 ---
 
-## 📚 How to Decide in Practice
+## 🧠 Bonus: Recognizing Binary Search Tricks
 
-1. **Is input sorted or can be?**  
-   → Consider two pointers or sorting
-2. **Need all combinations or explore paths?**  
-   → Use backtracking or DFS
-3. **Want shortest path / minimum steps?**  
-   → Use BFS
-4. **Problem has optimal substructure?**  
-   → Try dynamic programming
-5. **Scan substring or range in array?**  
-   → Use sliding window
-6. **Just one unmatched item / clever math?**  
-   → Try XOR, prefix sums, or bit tricks
+Use **Binary Search** on:
+
+* Sorted arrays
+* **Answers** (like in "minimum capacity" or "kth element")
+* Optimization problems (search for minimum that satisfies a condition)
+
+**Key Phrases:**
+
+* “Minimize the max”
+* “Find smallest/largest value such that...”
+* “Kth something...”
+
+**Examples:**
+
+* Koko Eating Bananas
+* Find Minimum in Rotated Sorted Array
+* Median of Two Sorted Arrays
+
 ---
+
