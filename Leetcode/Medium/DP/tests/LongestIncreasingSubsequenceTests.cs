@@ -1,10 +1,10 @@
 using Xunit;
 
 namespace Leetcode.Medium.DP.tests;
-
 using Xunit;
 
 public class LongestIncreasingSubsequenceTests
+
 {
     [Fact]
     public void EmptyArray_ReturnsZero()
