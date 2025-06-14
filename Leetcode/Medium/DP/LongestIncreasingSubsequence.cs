@@ -27,25 +27,4 @@ public class LongestIncreasingSubsequence
 
         return length;
     }
-
-    public int LengthOfLISIterative(int[] nums)
-    {
-        int[] dp = new int[nums.Length];
-        Array.Fill(dp, 1);
-        int comparisons = 0;
-
-        for (int i = 0; i < nums.Length; i++)
-        {
-            for (int j = 0; j < i; j++)
-            {
-                comparisons++;
-                if (nums[j] < nums[i])
-                {
-                    dp[i] = Math.Max(dp[i], dp[j] + 1);
-                }
-            }
-        }
-
-        return comparisons;
-    }
 }
