@@ -1,0 +1,7 @@
+| # | Difficulty | Problem                                                                                                                                          | What it Tests                        |
+|---|------------|--------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+| 1 | Easy       | [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)                                                | Basic in-order traversal             |
+| 2 | Medium     | [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)                                               | In-order = sorted list               |
+| 3 | Medium     | [173. BST Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)                                                                  | In-order with lazy evaluation        |
+| 4 | Medium     | [105. Construct Binary Tree from Preorder and Inorder](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Recursion + slice logic              |
+| 5 | Medium     | [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)                                                    | In-order to check ascending property |
