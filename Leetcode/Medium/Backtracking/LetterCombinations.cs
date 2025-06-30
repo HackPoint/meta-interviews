@@ -1,4 +1,4 @@
-namespace Leetcode.Backtracking;
+namespace Leetcode.Medium.Backtracking;
 
 public class LetterCombinationsPerformanceImprovement
 {
