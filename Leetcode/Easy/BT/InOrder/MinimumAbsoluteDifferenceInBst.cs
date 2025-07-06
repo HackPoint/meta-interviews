@@ -7,7 +7,7 @@ public class MinimumAbsoluteDifferenceInBst
     public int GetMinimumDifference(TreeNode root)
     {
         int minDiff = int.MaxValue;
-        int? prev;
+        int? prev = null;
 
         void InOrder(TreeNode node)
         {

@@ -1,8 +1,4 @@
-﻿
-
-
-
-using Leetcode.Easy.LinkedList.DFS;
+﻿using Leetcode.Easy.LinkedList.DFS;
 using Leetcode.Medium.BT;
 
 var trees = new AllPossibleFbtPossible().AllPossibleFBT(7);
