@@ -3,9 +3,9 @@
 | ✅ | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water)                                                                 | Hard  | Array, Stack, Two Pointers    | 2025-05-24 |
 | ✅ | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)                                                 | Hard  | Array, Binary Search          | 2025-05-24 |
 | ⬜ | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists)                                                               | Hard  | Linked List, Heap, Merge Sort | 2025-05-24 |
-| ⬜ | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring)                                                       | Hard  | String, Sliding Window        | 2025-05-24 |
-| ⬜ | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum)                                                           | Hard  | Monotonic Queue, Heap         | 2025-05-24 |
-| ⬜ | [Edit Distance](https://leetcode.com/problems/edit-distance)                                                                             | Hard  | DP, 2D Matrix                 | 2025-05-24 |
+| ✅ | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring)                                                       | Hard  | String, Sliding Window        | 2025-05-24 |
+| ✅ | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum)                                                           | Hard  | Monotonic Queue, Heap         | 2025-05-24 |
+| ✅| [Edit Distance](https://leetcode.com/problems/edit-distance)                                                                             | Hard  | DP, 2D Matrix                 | 2025-05-24 |
 | ⬜ | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching)                                                 | Hard  | DP, Recursion                 | 2025-05-24 |
 | ⬜ | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum)                                               | Hard  | DFS, Tree, Recursion          | 2025-05-24 |
 | ✅ | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses)                                                     | Hard  | Stack, DP                     | 2025-05-24 |
