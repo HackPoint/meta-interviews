@@ -18,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Documents\Rules\" />
+      <Folder Include="Hard\Arrays\BFS\" />
     </ItemGroup>
 
 </Project>
