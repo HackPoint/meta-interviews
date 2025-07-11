@@ -10,7 +10,7 @@
 | ✅  | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum)                                               | Hard  | DFS, Tree, Recursion          | 2025-05-24 |
 | ✅  | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses)                                                     | Hard  | Stack, DP                     | 2025-05-24 |
 | ✅  | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)                             | Hard  | BFS, DFS, Tree                | 2025-05-24 |
-| ⬜  | [Burst Balloons](https://leetcode.com/problems/burst-balloons)                                                                           | Hard  | DP, Interval                  | 2025-05-24 |
+| ✅  | [Burst Balloons](https://leetcode.com/problems/burst-balloons)                                                                           | Hard  | DP, Interval                  | 2025-05-24 |
 | ⬜  | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching)                                                                     | Hard  | DP, Greedy                    | 2025-05-24 |
 | ⬜  | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self)                                 | Hard  | Merge Sort, BIT               | 2025-05-24 |
 | ⬜  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops)                                         | Hard  | Graph, BFS, DP                | 2025-05-24 |
