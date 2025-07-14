@@ -34,8 +34,3 @@
 
 ---
 
-Leetcode 35. Search Insert Position
-Leetcode 704. Binary Search
-Leetcode 852. Peak Index in a Mountain Array
-
-

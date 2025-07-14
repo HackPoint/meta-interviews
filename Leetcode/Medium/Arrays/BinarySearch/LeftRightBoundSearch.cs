@@ -1,5 +1,21 @@
 namespace Leetcode.Medium.Arrays.BinarySearch;
 
+/// <summary>
+/// Classification: Binary Search
+/// Algorithm: Dual Binary Search (leftmost & rightmost)
+///
+/// Explanation (RU):
+/// • Мы выполняем **два** независимых бинарных поиска.
+///   1. <b>LeftBinarySearch</b> — находим крайний левый индекс target:<br/>
+///      при совпадении `nums[mid] == target` сдвигаем <c>right = mid - 1</c>,
+///      сохраняя текущий mid как потенциальный ответ.<br/>
+///   2. <b>RightBinarySearch</b> — находим крайний правый индекс target:<br/>
+///      при совпадении сдвигаем <c>left = mid + 1</c>.
+/// • Оба поиска занимают O(log n), итог — O(log n) времени и O(1) памяти.
+///
+/// Time Complexity:  O(log n)  
+/// Space Complexity: O(1)
+/// </summary>
 public class LeftRightBoundSearch
 {
     public int[] SearchRange(int[] nums, int target)
