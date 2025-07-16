@@ -35,7 +35,6 @@ public class KokoEatingBananas
                 left = mid + 1;
             }
         }
-
         return left;
     }
 
