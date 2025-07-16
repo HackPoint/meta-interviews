@@ -27,8 +27,7 @@ public class KokoEatingBananas
     public int MinEatingSpeed(int[] piles, int h) {
         int left = 1, right = piles.Max();
 
-        while (left < right)
-        {
+        while (left < right) {
             int mid = (left + right) / 2;
             if (IsEnough(piles, mid, h)) {
                 right = mid;
@@ -48,7 +47,6 @@ public class KokoEatingBananas
             if(hours > h) 
                 return false;
         }
-            
         return hours <= h;
     }
 }
