@@ -4,13 +4,12 @@ namespace Leetcode.Hard.tests;
 
 using Xunit;
 
-public class KthSmallestProductTests
-{
+public class KthSmallestProductTests {
     private readonly KthSmallestProductOfTwoSortedArrays _sol = new();
 
     [Theory]
     [InlineData(new int[] { -2, -1, 0, 1, 2 },
-        new int[] { -3, -1,  2, 4, 5 },
+        new int[] { -3, -1, 2, 4, 5 },
         3,
         -6L)]
     // // Single‐element arrays
