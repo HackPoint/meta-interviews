@@ -18,7 +18,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Hard\Arrays\BFS\" />
       <Folder Include="Roadmap-Workthrough\HashMaps&amp;Sets\" />
     </ItemGroup>
 
