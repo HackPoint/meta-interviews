@@ -202,12 +202,68 @@ while (queue.Count > 0) {
 
 ---
 
+Отличный и правильный вопрос. Давай разложим всё по-честному, строго по правилам — особенно если ты на этапе *узнавания паттерна* по ключевым признакам.
+
+---
+
+## 🔍 Что должно быть в определении Trie, но **отсутствует** у тебя:
+
+Текущее определение:
+
+> **Description**: A tree for storing prefixes of strings.
+> **When to Apply**: Autocomplete, word search.
+> **Common Keywords**: "starts with", "prefix search"
+
+---
+
+### ❌ Почему это определение неполное и **вводит в заблуждение**
+
+1. **"prefix search"** — слишком общее.
+   Оно не покрывает задачи типа:
+
+    * "подсчитать, сколько слов начинаются с каждого префикса"
+    * "получить сумму значений всех слов, начинающихся с префикса"
+    * "для каждой строки вернуть сумму всех префиксов, встречающихся в массиве"
+
+2. **Нет акцента на структуру узлов и частоту**:
+   Trie — это **не просто поиск**.
+   Это:
+
+    * Структура из `node.children`
+    * Каждая нода может содержать: `count`, `isWord`, `value`, `endCount`, …
+
+3. **Autocomplete и word search** — частные применения.
+   Но **подсчёт по префиксам**, **веса**, **частоты** — это основная мощь Trie.
+
+---
+
 ### 12. Trie (Prefix Tree)
 
-* **Description**: A tree for storing prefixes of strings.
-* **When to Apply**: Autocomplete, word search.
-* **Common Keywords**: "starts with", "prefix search"
+* **Description**:
+  A prefix tree where each node represents a character of the input.
+  Commonly used to store strings and efficiently query or process all words sharing a prefix.
 
+* **When to Apply**:
+
+    * Autocomplete systems
+    * Word dictionaries
+    * Frequency counting of prefixes
+    * Prefix-based score/sum/count problems
+    * Grouping or categorizing strings by shared prefixes
+
+* **Common Keywords**:
+  `"starts with"`, `"prefix search"`, `"group by prefix"`, `"prefix score"`, `"number of words with prefix"`
+
+* **Node fields often used**:
+
+```csharp
+class TrieNode {
+  public Dictionary<char, TrieNode> Children = new();
+  public int Count = 0;         // How many words pass through this node
+  public int EndCount = 0;      // How many words end at this node
+}
+```
+ye
 ```csharp
 class TrieNode {
     public Dictionary<char, TrieNode> Children = new();
