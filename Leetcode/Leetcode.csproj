@@ -18,6 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Easy\Sort Algorithms\BubbleSort\" />
       <Folder Include="Roadmap-Workthrough\HashMaps&amp;Sets\" />
     </ItemGroup>
 
