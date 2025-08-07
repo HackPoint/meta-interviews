@@ -1,4 +1,4 @@
-namespace Leetcode.TwoPointers;
+namespace Leetcode.Hard.TwoPointers;
 
 public class TrapWater
 {
