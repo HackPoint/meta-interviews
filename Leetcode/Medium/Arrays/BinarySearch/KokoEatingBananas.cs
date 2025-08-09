@@ -22,8 +22,7 @@ namespace Leetcode.Medium.Arrays.BinarySearch;
 /// - Ceil division without using floating point
 /// - Optimized upper bound based on average time per pile
 /// </summary>
-public class KokoEatingBananas
-{
+public class KokoEatingBananas {
     public int MinEatingSpeed(int[] piles, int h) {
         int left = 1, right = piles.Max();
 
@@ -31,22 +30,23 @@ public class KokoEatingBananas
             int mid = (left + right) / 2;
             if (IsEnough(piles, mid, h)) {
                 right = mid;
-            } else {
+            }
+            else {
                 left = mid + 1;
             }
         }
-        
+
         return left;
     }
 
-    private bool IsEnough(int[] piles, int k, int h)
-    {
+    private bool IsEnough(int[] piles, int k, int h) {
         int hours = 0;
         for (int i = 0; i < piles.Length; i++) {
             hours += (piles[i] + k - 1) / k;
-            if(hours > h) 
+            if (hours > h)
                 return false;
         }
+
         return hours <= h;
     }
 }

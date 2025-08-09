@@ -105,7 +105,7 @@ public class FruitIntoBasketsTests
     public void ThreeTypesEarly()
     {
         int[] fruits = { 1, 2, 3, 2, 2, 3, 4 };
-        int expected = 4; // from [2, 2, 3, 4] only 2 types allowed
+        int expected = 5; // from [2, 2, 3, 4] only 2 types allowed
         Assert.Equal(expected, _solution.TotalFruit(fruits));
     }
 
