@@ -32,7 +32,7 @@ public class Convert1DTo2DTests
     public void ConvertTo2D_InvalidDimensions_ReturnsEmptyMatrix()
     {
         // Arrange
-        var original = new[] { 1, 2, 3, 4 };
+        var original = new[] { 1, 2, 3, 4, 5 };
         int m = 2, n = 2;
         var solution = new Convert1DInto2DArray();
 
