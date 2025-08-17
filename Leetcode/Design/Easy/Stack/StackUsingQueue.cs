@@ -10,18 +10,18 @@ namespace Leetcode.Design.Easy.Stack;
 /// </summary>
 public class MyStack
 {
-    private List<int> q = new();
+    private readonly List<int> _q = new();
 
     /// <summary>
     /// Push element x onto stack.
     /// </summary>
     public void Push(int x)
     {
-        q.Add(x);
-        for (int i = 0; i < q.Count - 1; i++)
+        _q.Add(x);
+        for (int i = 0; i < _q.Count - 1; i++)
         {
-            q.Add(q[0]);
-            q.RemoveAt(0);
+            _q.Add(_q[0]);
+            _q.RemoveAt(0);
         }
     }
 
@@ -30,21 +30,23 @@ public class MyStack
     /// </summary>
     public int Pop()
     {
-        int val = q[0];
-        q.RemoveAt(0);
+        int val = _q[0];
+        _q.RemoveAt(0);
         return val;
     }
 
     /// <summary>
     /// Get the top element.
     /// </summary>
-    public int Top() => q[0];
+    public int Top() => _q[0];
 
     /// <summary>
     /// Returns whether the stack is empty.
     /// </summary>
-    public bool Empty() => q.Count == 0;
+    public bool Empty() => _q.Count == 0;
 }
+
+
 
 public class MyStackTests
 {
