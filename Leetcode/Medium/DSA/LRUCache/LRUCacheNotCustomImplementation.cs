@@ -26,11 +26,8 @@ public class LruCacheNotCustomImplementation
 
     public void Put(int key, int value)
     {
-        if (_cache.ContainsKey(key))
-        {
-            var existingNode = _cache[key];
+        if (_cache.TryGetValue(key, out var existingNode))
             _usage.Remove(existingNode);
-        }
         
         var newNode = new LinkedListNode<(int key, int value)>((key, value));
         _usage.AddFirst(newNode);
